@@ -12,10 +12,11 @@
 
     <x-header/>
 
-    
-    <footer>
-        <p>this is footer</p>
-    </footer>
+     <main>
+        @yield('content')
+    </main>
+
+   <x-footer/>
 </body>
 
 </html>

@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
     <header class="fixed top-0 left-0 w-full bg-white border z-50 fontLato">
         <div class="max-w-[1440px] mx-auto px-10 py-[30px]">
             <div class="hidden lg:flex items-center">
@@ -95,6 +85,3 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>

@@ -24,3 +24,15 @@
 button{
     cursor: pointer;
 }
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.shopbtn{
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    padding: 12px 24px;
+}

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Գլխավոր')
+@section('title', 'Home')
 
 @section('content')
   <main>

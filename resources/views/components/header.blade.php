@@ -97,7 +97,7 @@
                     <a
                         class="text-[14px] font-normal leading-5"
                         href="{{ route('login') }}">
-                        Sign in
+                        Login
                     </a>
 
                     <a

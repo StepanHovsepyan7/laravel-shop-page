@@ -8,9 +8,9 @@
                 <div class="flex items-center ml-auto gap-10">
                     <div class="logoParent relative flex items-center">
                         <input
-                        type="text"
-                        placeholder="Search Products"
-                        class="placeholder:text-[#999999]">
+                            type="text"
+                            placeholder="Search Products"
+                            class="placeholder:text-[#999999]">
 
                         <button type="button" class="btn absolute right-3">
                             <img class="pl-[12px]" src="{{ asset('images/search.svg') }}" alt="Search">
@@ -75,12 +75,61 @@
                     <span class="font-bold text-[20px] leading-5">Categories</span>
                 </div>
                 <div class="flex items-center gap-[4px]">
+
+                    @auth
+
+                    <span class="text-[14px]">
+                        Hi! {{ Auth::user()->first_name }}
+                    </span>
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+
+                        <button type="submit" class="text-[14px]">
+                            Log out
+                        </button>
+                    </form>
+
+                    @else
+
                     <img src="{{ asset('images/signin.svg') }}" alt="Sign in">
-                    <a class="text-[14px] font-normal leading-5" href=""> Sign in</a>
-                    <img class="ml-[20px]" src="{{ asset('images/fav.svg') }}" alt="Favorites">
-                    <a class="text-[14px] font-normal leading-5" href=""> Favorites</a>
-                    <img class="ml-[20px]" src="{{ asset('images/whiteCard.svg') }}" alt="Cart">
-                    <a class="text-[14px] font-normal leading-5" href="">Cart </a>
+
+                    <a
+                        class="text-[14px] font-normal leading-5"
+                        href="{{ route('login') }}">
+                        Sign in
+                    </a>
+
+                    <a
+                        class="text-[14px] font-normal leading-5 ml-5"
+                        href="{{ route('register') }}">
+                        Register
+                    </a>
+
+                    @endauth
+
+                    <img
+                        class="ml-[20px]"
+                        src="{{ asset('images/fav.svg') }}"
+                        alt="Favorites">
+
+                    <a
+                        class="text-[14px] font-normal leading-5"
+                        href="">
+                        Favorites
+                    </a>
+
+                    <img
+                        class="ml-[20px]"
+                        src="{{ asset('images/whiteCard.svg') }}"
+                        alt="Cart">
+
+                    <a
+                        class="text-[14px] font-normal leading-5"
+                        href="">
+                        Cart
+                    </a>
+
                 </div>
             </div>
         </div>

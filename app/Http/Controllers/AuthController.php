@@ -20,8 +20,15 @@ class AuthController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed',
-        ]);
+            'password' =>
+            [
+                'required',
+                'min:6',
+                'confirmed',
+                'regex:/[a-z]/',
+                'regex:/[A-Z]/',
+            ],
+        ], ['password.regex' => 'Password must contain at least one lowercase and one uppercase letter.',]);
 
         $user = User::create([
             'first_name' => $request->first_name,
@@ -47,14 +54,21 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return back()->withErrors([
+                'email' => "User doesn't exists",
+            ])->withInput();
+        }
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
             return redirect()->route('home');
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials are incorrect.',
+            'password' => 'Wrong password'
         ])->withInput();
     }
 

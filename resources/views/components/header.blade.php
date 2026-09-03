@@ -103,7 +103,7 @@
                     <a
                         class="text-[14px] font-normal leading-5 ml-5"
                         href="{{ route('register') }}">
-                        Register
+                        Sign up
                     </a>
 
                     @endauth

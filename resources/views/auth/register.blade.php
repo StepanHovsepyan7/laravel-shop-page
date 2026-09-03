@@ -118,8 +118,8 @@
                   <p class="text-sm text-red-500">{{ $message }}</p>
                   @enderror
 
-              
-                  
+
+
 
                   <button
                       type="submit"
@@ -127,6 +127,10 @@
                       SIGN UP
                   </button>
               </form>
+              <div class="flex gap-1">
+                  <span>Have an account ?</span>
+                  <a class="link" href="{{route('login')}}">Login</a>
+              </div>
           </div>
       </div>
       @endsection

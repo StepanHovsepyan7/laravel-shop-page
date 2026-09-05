@@ -1,21 +1,17 @@
-<footer class="relative mt-32 fontLato">
+<footer class="relative mt-[150px] fontLato">
     <div class="bg-[#D1E2EB] h-[327px] h-auto">
         <div class="max-w-[1440px] mx-auto px-8 pt-24 pb-10">
-
             <div class="max-w-[780px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
-
                 <div class="pt-[32px]">
                     <h3 class="text-[14px] font-bold text-[#262626] mb-5">
                         Company
                     </h3>
-
                     <ul class="space-y-3 text-[14px] font-normal text-[#555555]">
                         <li>
                             <a href="#" class="hover:text-gray-900 transition">
                                 About Us
                             </a>
                         </li>
-
                         <li>
                             <a href="#" class="hover:text-gray-900 transition">
                                 Our Store
@@ -23,25 +19,21 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="pt-[32px]">
                     <h3 class="text-[14px] font-bold text-[#262626] mb-5">
                         Career Opportunities
                     </h3>
-
                     <ul class="space-y-5 text-[14px] font-normal text-[#555555]">
                         <li>
                             <a href="#" class="hover:text-gray-900 transition">
                                 Selling Programs
                             </a>
                         </li>
-
                         <li>
                             <a href="#" class="hover:text-gray-900 transition">
                                 Advertise
                             </a>
                         </li>
-
                         <li>
                             <a href="#" class="hover:text-gray-900 transition">
                                 Cooperation
@@ -49,7 +41,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="pt-[32px]">
                     <h3 class="text-[14px] font-bold text-[#262626] mb-5">
                         Help
@@ -63,7 +54,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>

@@ -6,5 +6,6 @@
 <main>
   <x-trending-slider />
   <x-products :products="$products" />
+  <x-brandcategory/>
 </main>
 @endsection

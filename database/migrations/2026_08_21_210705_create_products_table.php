@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->decimal('price',8,2);
+            $table->string('image')->nullable();
+            $table->decimal('old_price', 8, 2)->nullable();
+            $table->unsignedTinyInteger('sale_percent')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
 

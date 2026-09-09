@@ -1,5 +1,6 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @extends('layouts.app')
+  @section('title', 'Sign up')
 
   @section('content')
 

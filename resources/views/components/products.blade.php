@@ -24,7 +24,7 @@
 
             @forelse ($products as $product)
 
-                <article class="
+            <article class="
                     group bg-white rounded-xl overflow-hidden shadow-sm
                     hover:shadow-lg transition-shadow duration-300
                     flex-shrink-0
@@ -33,12 +33,12 @@
                     sm:w-auto
                 ">
 
-                    <a href="{{ $product->url ?? '#' }}" class="block overflow-hidden">
+                <a href="{{ route('products.show',$product->id) }}" class="block overflow-hidden">
 
-                        <img
-                            src="{{ $product->image }}"
-                            alt="{{ $product->name }}"
-                            class="
+                    <img
+                        src="{{ $product->image }}"
+                        alt="{{ $product->name }}"
+                        class="
                                 w-full
                                 h-[400px]
                                 sm:h-[500px]
@@ -46,63 +46,61 @@
                                 group-hover:scale-105
                                 transition-transform
                                 duration-300
-                            "
-                        >
+                            ">
 
-                    </a>
+                </a>
 
-                    <div class="p-4">
+                <div class="p-4">
 
-                        <p class="text-base font-semibold text-gray-900 truncate">
-                            {{ $product->name }}
-                        </p>
+                    <p class="text-base font-semibold text-gray-900 truncate">
+                        {{ $product->name }}
+                    </p>
 
-                        <p class="text-sm text-gray-500 mt-1">
-                            {{ $product->brand ?? '' }}
-                        </p>
+                    <p class="text-sm text-gray-500 mt-1">
+                        {{ $product->brand ?? '' }}
+                    </p>
 
-                        <div class="flex items-center gap-2 mt-3">
+                    <div class="flex items-center gap-2 mt-3">
 
-                            <span class="text-lg font-bold text-[#FF2E00]">
-                                ${{ number_format($product->price, 0) }}
-                            </span>
+                        <span class="text-lg font-bold text-[#FF2E00]">
+                            ${{ number_format($product->price, 0) }}
+                        </span>
 
-                            @if ($product->old_price)
-                                <span class="text-sm text-[#9D9D9D] line-through">
-                                    ${{ number_format($product->old_price, 0) }}
-                                </span>
-                            @endif
+                        @if ($product->old_price)
+                        <span class="text-sm text-[#9D9D9D] line-through">
+                            ${{ number_format($product->old_price, 0) }}
+                        </span>
+                        @endif
 
-                            @if ($product->sale_percent)
-                                <span class="text-sm font-semibold text-[#FF2E00]">
-                                    -{{ $product->sale_percent }}%
-                                </span>
-                            @endif
+                        @if ($product->sale_percent)
+                        <span class="text-sm font-semibold text-[#FF2E00]">
+                            -{{ $product->sale_percent }}%
+                        </span>
+                        @endif
 
-                        </div>
+                    </div>
 
-                        <button
-                            type="button"
-                            class="
+                    <button
+                        type="button"
+                        class="
                                 w-full mt-4
                                 bg-gray-900 text-white
                                 py-2.5 rounded-lg
                                 hover:bg-gray-700
                                 transition-colors
-                            "
-                        >
-                            Add to cart
-                        </button>
+                            ">
+                        Add to cart
+                    </button>
 
-                    </div>
+                </div>
 
-                </article>
+            </article>
 
             @empty
 
-                <p class="text-sm text-gray-500 text-center py-10">
-                    No products to show.
-                </p>
+            <p class="text-sm text-gray-500 text-center py-10">
+                No products to show.
+            </p>
 
             @endforelse
 
@@ -111,4 +109,3 @@
     </div>
 
 </div>
-

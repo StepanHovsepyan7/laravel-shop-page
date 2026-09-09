@@ -69,68 +69,67 @@
 
     <div class="hidden bg-[#262626] text-white w-full h-[78px] mt-[98px] fontLato lg:block">
         <div class="max-w-[1440px] mx-auto px-10 pt-[27px]">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-[2px]">
-                    <img src="{{ asset('images/2.svg') }}" alt="Categories">
-                    <span class="font-bold text-[20px] leading-5">Categories</span>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[2px]">
+                        <img src="{{ asset('images/2.svg') }}" alt="Categories">
+                        <span class="font-bold text-[20px] leading-5">Categories</span>
+                    </div>
+                    <div class="flex items-center gap-[4px]">
+
+                        @auth
+
+                        <span class="text-[14px]">
+                            Hi! {{ Auth::user()->first_name }}
+                        </span>
+
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+
+                            <button type="submit" class="text-[14px]">
+                                Log out
+                            </button>
+                        </form>
+
+                        @else
+
+                        <img src="{{ asset('images/signin.svg') }}" alt="Sign in">
+
+                        <a
+                            class="text-[14px] font-normal leading-5"
+                            href="{{ route('login') }}">
+                            Login
+                        </a>
+
+                        <a
+                            class="text-[14px] font-normal leading-5 ml-5"
+                            href="{{ route('register') }}">
+                            Sign up
+                        </a>
+
+                        @endauth
+
+                        <img
+                            class="ml-[20px]"
+                            src="{{ asset('images/fav.svg') }}"
+                            alt="Favorites">
+
+                        <a
+                            class="text-[14px] font-normal leading-5"
+                            href="">
+                            Favorites
+                        </a>
+
+                        <img
+                            class="ml-[20px]"
+                            src="{{ asset('images/whiteCard.svg') }}"
+                            alt="Cart">
+
+                        <a
+                            class="text-[14px] font-normal leading-5"
+                            href="">
+                            Cart
+                    </div>
                 </div>
-                <div class="flex items-center gap-[4px]">
-
-                    @auth
-
-                    <span class="text-[14px]">
-                        Hi! {{ Auth::user()->first_name }}
-                    </span>
-
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-
-                        <button type="submit" class="text-[14px]">
-                            Log out
-                        </button>
-                    </form>
-
-                    @else
-
-                    <img src="{{ asset('images/signin.svg') }}" alt="Sign in">
-
-                    <a
-                        class="text-[14px] font-normal leading-5"
-                        href="{{ route('login') }}">
-                        Login
-                    </a>
-
-                    <a
-                        class="text-[14px] font-normal leading-5 ml-5"
-                        href="{{ route('register') }}">
-                        Sign up
-                    </a>
-
-                    @endauth
-
-                    <img
-                        class="ml-[20px]"
-                        src="{{ asset('images/fav.svg') }}"
-                        alt="Favorites">
-
-                    <a
-                        class="text-[14px] font-normal leading-5"
-                        href="">
-                        Favorites
-                    </a>
-
-                    <img
-                        class="ml-[20px]"
-                        src="{{ asset('images/whiteCard.svg') }}"
-                        alt="Cart">
-
-                    <a
-                        class="text-[14px] font-normal leading-5"
-                        href="">
-                        Cart
-                    </a>
-
-                </div>
-            </div>
+            </a>
         </div>
     </div>

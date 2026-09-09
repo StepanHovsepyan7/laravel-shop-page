@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-[#F7DDD0] w-full h-[221px] mt-[68px] flex justify-around items-center">
+    <div class="hidden bg-[#F7DDD0] w-full h-[221px] mt-[68px] justify-around items-center lg:flex">
         <div class="flex flex-col">
             <h4 class="text-[#465D6B] font-bold text-[24px]">MAGSAFE</h4>
             <div>

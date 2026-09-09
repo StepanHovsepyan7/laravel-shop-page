@@ -1,4 +1,4 @@
-    <header class="fixed top-0 left-0 w-full bg-white border z-50 fontLato">
+    <header id="navigation" class="fixed top-0 left-0 w-full bg-white border z-50 fontLato">
         <div class="max-w-[1440px] mx-auto px-10 py-[30px]">
             <div class="hidden lg:flex items-center">
                 <div class="flex items-center gap-2 shrink-0">
@@ -38,7 +38,7 @@
             </div>
 
             <div class="flex lg:hidden items-center justify-between">
-                <button type="button" class="text-[#1A1A1A]">
+                <button id="menuBtn" type="button" class="text-[#1A1A1A]">
                     <img
                         src="{{ asset('images/menu.svg') }}"
                         alt="Menu">
@@ -67,7 +67,7 @@
         </div>
     </header>
 
-    <div class="bg-[#262626] text-white w-full h-[78px] mt-[98px] fontLato">
+    <div class="hidden bg-[#262626] text-white w-full h-[78px] mt-[98px] fontLato lg:block">
         <div class="max-w-[1440px] mx-auto px-10 pt-[27px]">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-[2px]">

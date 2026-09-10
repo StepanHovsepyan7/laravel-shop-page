@@ -25,8 +25,9 @@ closeBtn.addEventListener("click", () => {
 mobileMenu.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
     mobileDrawer.classList.add("-translate-x-full");
+});
 
-    sizeBtns.forEach((sizeBtn) => {});
+sizeBtns.forEach((sizeBtn) => {
     sizeBtn.addEventListener("click", () => {
         sizeBtns.forEach((btn) => {
             btn.classList.remove("btnActive");

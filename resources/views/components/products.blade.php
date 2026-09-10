@@ -10,7 +10,10 @@
         </a>
     </div>
 
-    <div class="mt-[48px]">
+    <div data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="150"
+        class="mt-[48px]" data-aos-duration="2000" class="mt-[48px]">
 
         <div class="
             flex gap-4 overflow-x-auto snap-x snap-mandatory
@@ -101,11 +104,7 @@
             <p class="text-sm text-gray-500 text-center py-10">
                 No products to show.
             </p>
-
             @endforelse
-
         </div>
-
     </div>
-
 </div>

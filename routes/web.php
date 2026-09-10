@@ -15,13 +15,3 @@ Route::post('/login', [AuthController::class, 'login'])->middleware('guest');
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout')->middleware('auth');
 Route::get('/products/{product}',[ProductController::class,'show'])->name('products.show');
-
-
-// Route::get('/dashboard', ...)->middleware('auth');
-
-// Route::resource('products', ProductController::class)->only(['index']);
-
-// Route::middleware(['auth','admin'])->group(function(){
-//     Route::resource('products',ProductController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
-
-// });

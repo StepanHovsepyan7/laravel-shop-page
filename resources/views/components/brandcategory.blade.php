@@ -1,5 +1,8 @@
 <div class="max-w-[1440px] mx-auto mt-17 px-4 fontLato">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="150" data-aos-duration="2000"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="flex h-[380px] w-full overflow-hidden">
             <div class="bg-[#BF2E3B] w-1/2 px-5 py-12 text-white flex flex-col justify-center">
                 <h4 class="font-extrabold text-[28px] sm:text-[32px] lg:text-[36px] max-w-[270px] leading-tight">
@@ -43,7 +46,9 @@
             </div>
         </div>
     </div>
-    <div class="hidden bg-[#F7DDD0] w-full h-[221px] mt-[68px] justify-around items-center lg:flex">
+    <div data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="150" class="hidden bg-[#F7DDD0] w-full h-[221px] mt-[68px] justify-around items-center lg:flex">
         <div class="flex flex-col">
             <h4 class="text-[#465D6B] font-bold text-[24px]">MAGSAFE</h4>
             <div>
@@ -54,7 +59,11 @@
         </div>
         <img class="w-[493px] h-[221px]" src="{{ asset('images/iphone.png') }}" alt="iphone">
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-[68px]">
+    <div
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="150"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-[68px]">
         <div class="flex h-[380px] w-full overflow-hidden">
             <div class="bg-[#D11FB5] w-1/2 px-5 py-12 text-white flex flex-col justify-center">
                 <h4 class="font-extrabold text-[28px] sm:text-[32px] lg:text-[36px] max-w-[270px] leading-tight">
